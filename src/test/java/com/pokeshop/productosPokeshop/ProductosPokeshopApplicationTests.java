@@ -1,0 +1,13 @@
+package com.pokeshop.productosPokeshop;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ProductosPokeshopApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
