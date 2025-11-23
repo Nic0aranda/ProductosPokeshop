@@ -36,6 +36,13 @@ public class CategoriaController {
         return ResponseEntity.created(URI.create("/api/v1/categorias/" + saved.getIdCategoria())).body(saved);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Categoria> update(@PathVariable Long id, @RequestBody Categoria categoria) {
+        categoria.setIdCategoria(id); // Aseguramos que el ID sea el correcto
+        Categoria updated = categoriaService.save(categoria); // save sirve para crear y actualizar en JPA
+        return ResponseEntity.ok(updated);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         categoriaService.deleteById(id);
