@@ -50,6 +50,20 @@ public class ProductoController {
         return ResponseEntity.ok(updated);
     }
 
+    @PutMapping("/{id}/stock")
+    public ResponseEntity<String> actualizarStock(
+            @PathVariable Long id, 
+            @RequestParam int cantidad) {
+            
+        try {
+            productoService.descontarStock(id, cantidad);
+            return ResponseEntity.ok("Stock actualizado correctamente");
+        } catch (RuntimeException e) {
+            // Si falta stock o no existe el producto, devolvemos error 400 (Bad Request)
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         productoService.deleteById(id);

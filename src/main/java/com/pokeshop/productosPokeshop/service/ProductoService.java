@@ -52,6 +52,24 @@ public class ProductoService {
         return productoRepository.save(producto);
     }
 
+    @Transactional
+    public void descontarStock(Long idProducto, int cantidadArestar) {
+        // 1. Buscar el producto
+        Producto producto = productoRepository.findById(idProducto)
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado con ID: " + idProducto));
+
+        // 2. Verificar que haya suficiente stock
+        if (producto.getStock() < cantidadArestar) {
+            throw new RuntimeException("Stock insuficiente. Solicitado: " + cantidadArestar + ", Disponible: " + producto.getStock());
+        }
+
+        // 3. Restar y guardar
+        int nuevoStock = producto.getStock() - cantidadArestar;
+        producto.setStock(nuevoStock);
+        
+        productoRepository.save(producto);
+    }
+
     public void deleteById(Long id) {
         productoRepository.deleteById(id);
     }
