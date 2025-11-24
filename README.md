@@ -15,11 +15,11 @@ comando para realizar las pruebas: .\mvnw.cmd test
 
 Datos de ejemplo en BD
 INSERT INTO `producto`(`id_producto`, `descripcion`, `edicion`, `estado`, `nombre`, `stock`, `id_categoria`, `precio`) VALUES 
-('mar', 'Booster Pack 1', 'std', 'nuevo', 'Booster Pack 1', 10, 1, 19.99),
-('mar', 'Booster Pack 2', 'std', 'nuevo', 'Booster Pack 2', 25, 1, 24.99),
-('mar', 'Booster Pack 3', 'std', 'nuevo', 'Booster Pack 3', 30, 1, 29.99),
-('mar', 'Sobre 1', 'std', 'nuevo', 'Sobre 1', 10, 2, 9.99),
-('mar', 'Sobre 2', 'std', 'nuevo', 'Sobre 2', 50, 2, 14.99),
-('mar', 'Sobre 3', 'std', 'nuevo', 'Sobre 3', 70, 2, 19.99),
-('mar', 'Carta Solitaria 1', 'std', 'nuevo', 'Carta Solitaria 1', 5, 3, 4.99),
-('mar', 'Pikachu Illustrator rare', 'coleccionable', 'nuevo', 'Pikachu Illustrator', 1, 3, 9999999999.99);
+('1', 'Booster Pack 1', 'std', 'nuevo', 'Booster Pack 1', 10, 1, 19.99),
+('2', 'Booster Pack 2', 'std', 'nuevo', 'Booster Pack 2', 25, 1, 24.99),
+('3', 'Booster Pack 3', 'std', 'nuevo', 'Booster Pack 3', 30, 1, 29.99),
+('4', 'Sobre 1', 'std', 'nuevo', 'Sobre 1', 10, 2, 9.99),
+('5', 'Sobre 2', 'std', 'nuevo', 'Sobre 2', 50, 2, 14.99),
+('6', 'Sobre 3', 'std', 'nuevo', 'Sobre 3', 70, 2, 19.99),
+('7', 'Carta Solitaria 1', 'std', 'nuevo', 'Carta Solitaria 1', 5, 3, 4.99),
+('8', 'Pikachu Illustrator rare', 'coleccionable', 'nuevo', 'Pikachu Illustrator', 1, 3, 999999.99);
